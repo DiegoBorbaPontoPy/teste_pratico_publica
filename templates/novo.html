@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <!-- Usando o método post para enviar dados do novo placar -->
+    <form action="{{ url_for('criar') }}" method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Placar</label>
+            <!-- Entrada de dados para registro do novo jogo -->
+            <input type="text" id="nome" name="nome" class="form-control">
+          </div>
+          <!-- Botão que "envia" os dados -->
+          <button type="submit" class="btn btn-primary btn-salvar">Registrar Novo Jogo</button>
+        </fieldset>
+    </form>
+{% endblock %}
