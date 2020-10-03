@@ -9,6 +9,8 @@ from flask import Flask, render_template, request, redirect, session, flash, url
 app = Flask(__name__)
 app.secret_key = 'flask'
 #chave secreta da sessão
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+#Configuração de cache
 
 #Função que processa as estatísticas da temporada a partir do placar
 #Parâmetros: Placar do jogo atual, e estatisticas do placar anterior
